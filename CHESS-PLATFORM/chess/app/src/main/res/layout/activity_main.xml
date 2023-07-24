@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FC14343A"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/infoWrapper"
+            android:layout_width="match_parent"
+            android:layout_height="305dp"
+            android:background="@color/backGround"
+            tools:context=".MainActivity">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/mainProfileImage"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="28dp"
+                android:src="@drawable/profileicon2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/mainPlayerName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="48dp"
+                android:text="PlayerName"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                app:layout_constraintStart_toEndOf="@+id/mainProfileImage"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/rapidImageView"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginEnd="104dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rapidTextView"
+                app:srcCompat="@drawable/rapid" />
+
+            <TextView
+                android:id="@+id/rapidTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="99dp"
+                android:text="rápida"
+                android:textColor="#CDFFFFFF"
+                android:textSize="20sp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/blitzTextView"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <TextView
+                android:id="@+id/blitzRating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="98dp"
+                android:text="1952"
+                android:textColor="#FAF8F8"
+                android:textSize="26sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rapidImageView" />
+
+            <TextView
+                android:id="@+id/blitzTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="108dp"
+                android:layout_marginTop="40dp"
+                android:text="Blitz"
+                android:textColor="#CDFFFFFF"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/mainProfileImage" />
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="104dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/blitzTextView"
+                app:srcCompat="@drawable/blitz" />
+
+            <TextView
+                android:id="@+id/blitzRating2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="100dp"
+                android:text="1952"
+                android:textColor="#FAF8F8"
+                android:textSize="26sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+
+            <ImageView
+                android:id="@+id/config"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="36dp"
+                android:layout_marginEnd="32dp"
+                android:backgroundTint="#76FFFFFF"
+                android:onClick="settings"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/config"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/buttonsContainer"
+            android:layout_width="match_parent"
+            android:layout_height="180dp">
+
+            <Button
+                android:id="@+id/selectTime"
+                android:layout_width="350dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="20dp"
+                android:backgroundTint="#40676767"
+                android:text="SELECIONAR RÍTIMO"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.491"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/playButton"
+                android:layout_width="350dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="30dp"
+                android:backgroundTint="#00670E"
+                android:onClick="play"
+                android:text="JOGAR"
+                android:textColor="#FFFFFF"
+                android:textSize="22sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.491"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/selectTime" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/hr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="______________________________"
+            android:textColor="#92FBFBFB"
+            android:textSize="25sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+
+
+            <TextView
+                android:id="@+id/resultMatch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Ultimas partidas jogadas:"
+                android:textAlignment="center"
+                android:textColor="#D6FFFFFF"
+                android:textSize="20sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+</ScrollView>
